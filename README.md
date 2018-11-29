@@ -1,6 +1,6 @@
 # Cluster Events
 
-Node's event emitter for cluster workers.
+**Node's event emitter for cluster workers.**
 
 Unlike traditional NodeJS EventEmitter, this module broadcasts the event to 
 all worker processes forked by **cluster** or **child_process** (When forking 
