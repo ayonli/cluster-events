@@ -35,7 +35,7 @@ if (cluster.isMaster) {
     });
 
     express.get("/update-counter", (req, res) => {
-        // Only one process will emit this event and increace the counter.
+        // Only one process will emit this event and increase the counter.
         emitter.emit("updateCounter");
         res.send("OK");
     }).get("/get-counter", (req, res) => {
@@ -70,7 +70,7 @@ if (cluster.isMaster) {
     });
 
     express.get("/update-counter", (req, res) => {
-        // All processes will emit this event and increace the counter.
+        // All processes will emit this event and increase the counter.
         emitter.emit("updateCounter");
         res.send("OK");
     }).get("/get-counter", (req, res) => {
@@ -82,18 +82,18 @@ if (cluster.isMaster) {
 }
 ```
 
-The only difference of usage is that *cluster-events*'s EventEmitter requires an
-unique ID to identify the instance among all potential instances, and all other 
-details are just same, however your event will be emitted to all the listeners 
-in all worker processes.
+The only difference of usage is that EventEmitter of *cluster-events* requires 
+an unique ID to identify the instance among all potential instances, and all 
+other details are just the same, however your event will be emitted to all the 
+listeners in all worker processes.
 
 ## Limits
 
 Although this module allows you broadcasting the event, however, because the 
 limitation of IPC communication, when you emit an event with some data, you can 
 only pass the data that can be serialized via `JSON.stringify()`, any other 
-types of data will get lost while transmission (Also, event names only 
+types of data will be lost while transmission (Also, event names only 
 accept strings with this module).
 
-So it's your decision to use this module or the traditional NodeJS EventEmitter
+So it's your decision to use this module or the traditional NodeJS EventEmitter,
 based on your needs.

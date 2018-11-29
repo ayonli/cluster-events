@@ -18,7 +18,9 @@
     "listeners",
     "cluster",
     "child-process",
-    "workers"
+    "workers",
+    "pub/sub",
+    "publisher/subscriber"
   ],
   "author": "Ayon Lee <i@hyurl.com>",
   "license": "MIT",
