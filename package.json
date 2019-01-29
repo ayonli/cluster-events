@@ -1,6 +1,6 @@
 {
   "name": "cluster-events",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Node's event emitter for cluster workers.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/hyurl/cluster-events#readme",
   "dependencies": {
-    "ipchannel": "^0.1.5"
+    "ipchannel": "^0.2.0"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

@@ -93,7 +93,7 @@ Although this module allows you broadcasting the event, however, because the
 limitation of IPC communication, when you emit an event with some data, you can 
 only pass the data that can be serialized via `JSON.stringify()`, any other 
 types of data will be lost while transmission (Also, event names only 
-accept strings with this module).
+accept strings in this module).
 
 So it's your decision to use this module or the traditional NodeJS EventEmitter,
 based on your needs.
